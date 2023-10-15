@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Med Reminder App</string>
+    <string name="reminder_dosage">Dosage: %1$s</string>
+    <string name="reminder_time">Time: %1$s</string>
+    <string name="reminder_days">Days: %1$s</string>
+    <string name="alarm_time">Next Reminder: %1$s</string>
+    <string name="upcoming_alarm">Next Reminder In: %1$s</string>
+    <string name="reminder_status">%s Reminders</string>
+    <string name="reminder_status_single">%s Reminder</string>
+    <string name="reminder_day">Next Alarm: Tomorrow</string>
+</resources>

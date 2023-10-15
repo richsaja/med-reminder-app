@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".secondActivity">
+
+    <TextView
+        android:id="@+id/reminderInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Reminder Info"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminderInfo" />
+
+    <EditText
+        android:id="@+id/dosageField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Dosage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameField" />
+
+    <TextView
+        android:id="@+id/daysText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Days of the Week"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dosageField" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="266dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="25dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintStart_toEndOf="@+id/timeText"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxContainer" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        android:text="Time"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxContainer" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="115dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:text="Create"
+        android:onClick="create_active"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="80dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <LinearLayout
+        android:id="@+id/checkboxContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/daysText"
+        app:layout_constraintTop_toBottomOf="@+id/daysText">
+
+        <CheckBox
+            android:id="@+id/SUNDAY"
+            style="@style/CheckBoxWithTextOnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Sun" />
+
+        <CheckBox
+            android:id="@+id/MONDAY"
+            style="@style/CheckBoxWithTextOnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Mon" />
+
+        <CheckBox
+            android:id="@+id/TUESDAY"
+            style="@style/CheckBoxWithTextOnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Tue" />
+
+        <CheckBox
+            android:id="@+id/WEDNESDAY"
+            style="@style/CheckBoxWithTextOnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Wed" />
+
+        <CheckBox
+            android:id="@+id/THURSDAY"
+            style="@style/CheckBoxWithTextOnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Thu" />
+
+        <CheckBox
+            android:id="@+id/FRIDAY"
+            style="@style/CheckBoxWithTextOnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Fri" />
+
+        <CheckBox
+            android:id="@+id/SATURDAY"
+            style="@style/CheckBoxWithTextOnTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Sat" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

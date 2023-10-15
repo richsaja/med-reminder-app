@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reminderLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/reminderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:id="@+id/reminderInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_rounded_corner"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reminderDosage"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Dosage:" />
+
+            <TextView
+                android:id="@+id/reminderDays"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Days:" />
+
+            <TextView
+                android:id="@+id/reminderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Time:" />
+
+            <TextView
+                android:id="@+id/reminderNextAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Next Alarm:" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/changeReminderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/change_reminder_bottom_corner"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!--                    <Space-->
+            <!--                        android:layout_width="0dp"-->
+            <!--                        android:layout_height="0dp"-->
+            <!--                        android:layout_weight="30" />-->
+
+            <ImageButton
+                android:id="@+id/editBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/edit_icon" />
+
+            <ImageButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/delete_icon" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

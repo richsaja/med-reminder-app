@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/remindersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Reminders"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addReminderButton"
+        android:layout_width="116dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/add_button" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="73dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings_button" />
+
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="73dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/question_icon" />
+
+    <TextView
+        android:id="@+id/addReminderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/addReminderButton"
+        app:layout_constraintEnd_toEndOf="@+id/addReminderButton"
+        app:layout_constraintStart_toStartOf="@+id/addReminderButton" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="420dp"
+        android:layout_marginTop="50dp"
+        android:fadingEdgeLength="10dp"
+        android:requiresFadingEdge="vertical"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remindersText">
+
+        <LinearLayout
+            android:id="@+id/reminderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reminderTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/rounded_corner"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="#FFFFFF" />
+
+                <LinearLayout
+                    android:id="@+id/reminderInfoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_rounded_corner"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/reminderDosage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Dosage:" />
+
+                    <TextView
+                        android:id="@+id/reminderDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Days:" />
+
+                    <TextView
+                        android:id="@+id/reminderTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Time:" />
+
+                    <TextView
+                        android:id="@+id/reminderNextAlarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Next Alarm:" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/changeReminderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="@drawable/change_reminder_bottom_corner"
+                    android:orientation="horizontal">
+
+                    <Space
+                                            android:layout_width="0dp"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="1" />
+
+                    <!--                    <Space-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight="30" />-->
+
+                    <ImageButton
+                        android:id="@+id/editBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/edit_icon" />
+
+                    <ImageButton
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/delete_icon" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/nextAlarmIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Reminder in: "
+        app:layout_constraintEnd_toEndOf="@+id/remindersText"
+        app:layout_constraintStart_toStartOf="@+id/remindersText"
+        app:layout_constraintTop_toBottomOf="@+id/remindersText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
